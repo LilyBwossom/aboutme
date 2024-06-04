@@ -1,13 +1,8 @@
-:root {
-    --bg-dark-color: #000;
-    --text-dark-color: #fff;
-    --text-dark-subtext-color: #8a8a8a; 
-    --text-highlight: #f895ea;
-    --seperator: rgba(218, 107, 203, 0.5);
-
-    /* hidden light theme */
-    --bg-light-color: #fff;
-    
+:root {	
+    --bg-color: #000;
+	--menu-bg-color: #111111;
+    --text-color: #fff;
+    --text-highlight: #FFA8D9;
 }
 
 * {
@@ -26,8 +21,9 @@ body {
     margin: 0;
     padding: 0 1rem 0rem 1rem;
     min-height: 100vh;
-    color: var(--text-dark-color);
-    background-color: var(--bg-dark-color);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+	transition: filter 0.5s ease;
 }
 
 .main {
@@ -44,22 +40,13 @@ body {
     max-width: 75ch;
 }
 
-.main footer {
-    height: 100%;
-    display: flex;
-    flex: 1;
-    align-items: flex-end;
-    justify-content: center;
-    color: var(--text-dark-subtext-color)
-}
-
 a, .text-highlight {
     color: var(--text-highlight);
     text-decoration: none;
 }
 
 .text-normal {
-    color: var(--text-dark-color);
+    color: var(--text-color);
 }
 
 a:hover {
@@ -68,4 +55,50 @@ a:hover {
 
 ul {
     padding: 1rem;
+}
+
+.profile {
+	width: 100px;
+	height: 100px;
+	background: var(--bg-color);
+    border-radius: 50%;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+}
+
+.settingsbutton {
+  cursor: pointer;
+  appearance: none;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border-radius: 6px 6px 6px 6px;
+  font-size: 20px;
+}
+
+.settings {
+  position: absolute;
+  right: 93.5%;
+  bottom: 2.5%;
+}
+
+.settings:hover{
+    -webkit-filter: invert(100%) !important;
+}
+
+dialog {
+	opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+	transform: scale(0.1, 0.1);
+	background-color: var(--menu-bg-color);
+	border-radius: 6px 6px 6px 6px;
+	border: 0px;
+}
+
+.blur {
+    filter: blur(2px);
 }
