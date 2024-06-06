@@ -49,12 +49,25 @@ a, .text-highlight {
     color: var(--text-color);
 }
 
+b {
+    color: var(--text-color);
+}
+
 a:hover {
     text-decoration: underline;
 }
 
 ul {
-    padding: 1rem;
+	padding-left: 20px;
+	list-style-position: outside;
+}
+
+p + ul {
+    margin-top: 2px;
+}
+
+b + ul {
+    margin-top: 2px;
 }
 
 .profile {
@@ -82,8 +95,26 @@ button {
 
 .settings {
   position: absolute;
-  right: 93.5%;
-  bottom: 2.5%;
+  bottom: 15;
+  left: 10;
+}
+
+.donatebutton {
+  position: absolute;
+  bottom: 15;
+  width: 175px;
+  height: 47.5px;
+  border-radius: 25px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.kofiimage {
+	width: 40px;
+	height: 25px;
+	top: 2.5px;
+	left: 2.5px;
+	position: relative;
 }
 
 .settings:hover{
