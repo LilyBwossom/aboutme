@@ -1,0 +1,158 @@
+<html>
+   <head>
+      <title>Lily</title>
+      <link rel="stylesheet" href="stylesheets/base.css">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <script type="text/javascript" src="scripts/settings.js"></script>
+   </head>
+   <body>
+      <div class="main">
+         <div style="max-width: 85%">
+            <nav class="nav"><a href="index.html">home</a><a href="inscryption.html">inscryption</a><a href="blossom-engine.html">blossom engine</a><a href="extensions.html">chrome extensions</a></nav>
+            <dialog id="SettingsDialog" style="width: 10%; opacity:0">
+               <button style="position: fixed; top: 10px; left: 5px;" onclick="toggleSettings()">
+                  <svg viewBox="0 0 24 24" width="2.4em" height="2.4em">
+                     <path style="color:var(--text-color)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M18 6L6 18M6 6l12 12"></path>
+                  </svg>
+               </button>
+               <br></br>
+			   <b style="font-size: 24px">Themes:</b>
+			   <br></br>
+               <button type="button" style="width: 100px" class="button" onclick="setTheme('Midnight')">Midnight</button><br></br>
+               <button type="button" style="width: 100px" class="button" onclick="setTheme('Blossom')">Blossom</button><br></br>
+            </dialog>
+			<dialog id="InfoDialog" style="width: 10%; opacity:0">
+               <button style="position: fixed; top: 10px; left: 5px;" onclick="closeCredits()">
+                  <svg viewBox="0 0 24 24" width="2.4em" height="2.4em">
+                     <path style="color:var(--text-color)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M18 6L6 18M6 6l12 12"></path>
+                  </svg>
+				</button>
+				<br></br>
+				<div>
+					<div style="float: left; width: auto; margin-right: 40px;">
+						<b style="font-size: 24px">Songs:</b>
+						<ul id="SongsContainer">
+					</div>
+					
+					<div style="float: left; width: auto;">
+						</ul>
+						<b style="font-size: 24px">Credits:</b>
+						<ul id="CreditsContainer">
+						</ul>
+					</div>
+				</div>
+            </dialog>
+            <div style="max-width: 100%;">
+				<h1>Category Downloads</h1>
+				<p style="white-space:pre">Download the mods that you like, put the contents 
+of the downloaded zip files inside of the mods folder of 
+the engine, restart the game, and easily play with your favorite mods!</p>
+				<div class="container" style="max-width: 100%;">
+				
+					<div class="squircle" style="text-align: center;">
+						<h2 style="white-space:pre">hotline 024</h2>
+						<img class="squircle" src="fnf/card_images/hotline024.png" width="150" height="150">
+						<br></br>
+						<span style="font-size:1.2em;">
+							<a onClick="showCredits(['broadcasting', 'mirror magic', 'fandomania', 'killer queen', 'hyperfunk', 'sugarcrush', 'smokebomb', 'overdrive', 'expurgated', 'soda disco funk', 'armageddon', 'thunderstorm', 'cg megamix', 'promenade', 'deathmatch', 'nightland', 'uncanny valley', 'extraterrestrial', 'satellite picnic', 'sussy pussy', 'close chuckle', 'deep poems', 'majin', 'astral projection'], [['hotline 024', 'https://gamebanana.com/mods/373298']]); return false;" href="#" target=”_blank”>show mod info</a>
+						</span>
+						<br></br>
+						<a href="fnf/card_images/hotline024.png" download>
+							<button type="button" style="width: 175px; height:50px; font-size:1.4em" class="button">Download Mod</button>
+						</a>
+					</div>
+					
+					<div class="squircle" style="text-align: center;">
+						<h2 style="white-space:pre">FNAF</h2>
+						<img class="squircle" src="fnf/card_images/fnaf.png" width="150" height="150">
+						<br></br>
+						<span style="font-size:1.2em;">
+							<a onClick="showCredits(['lore expanded', 'fnaf rap battle', 'lurking', 'followed', 'go fish', 'restless', 'guy', 'miller', 'midnight', 'performance', 'trapped', 'man', 'criminal', 'bite', 'showtime', 'terminated', 'watchful', 'beatbox', 'golden', 'lore', 'blubber', 'guy (vloo)', 'midnight (vloo)', 'bite (vloo)', 'lore (vloo)', 'unlikely rivals', 'beastbox', 'bite (vreen)', 'fever'], [['ourple guy', 'https://gamebanana.com/mods/357511'], ['vloo', 'https://gamebanana.com/mods/427724'], ['vreen', 'https://gamebanana.com/wips/71181']]); return false;" href="#" target=”_blank”>show mod info</a>
+						</span>
+						<br></br>
+						<a href="fnf/card_images/fnaf.png" download>
+							<button type="button" style="width: 175px; height:50px; font-size:1.4em" class="button">Download Mod</button>
+						</a>
+					</div>
+					
+				</div>
+				<br></br>
+				<br></br>
+            </div>
+			<button class="donatebutton" onclick="window.open('https://ko-fi.com/lilysylvie','_blank')" style="background-color:var(--text-highlight);">
+				<img class="kofiimage" src="https://storage.ko-fi.com/cdn/cup-border.png" data-rotation="0">
+				<b style="font-size: 16px; position:relative; margin-left: 7.5px; bottom: 5px; color:#fff">Support me</b>
+			</button>
+            <button type="submit" class="settings" onclick="toggleSettings()">
+				<img src="images/settings_button.png" style="width: 80px; height: 80px;" />
+            </button>
+         </div>
+      </div>
+   </body>
+   <script>	
+    document.addEventListener("DOMContentLoaded", function(arg) {
+		document.getElementById("InfoDialog").addEventListener('click', function(event) {
+			dialogClickHandler(event, closeCredits);
+		});
+	});
+  
+	function showCredits(songs, credits) {
+		console.log("pressed!");
+
+		if (songs != null && credits != null) {
+			createLinks(songs, credits);
+		}
+		
+		document.getElementById("InfoDialog").showModal();
+		document.getElementById("InfoDialog").style = "opacity: 1;";
+		document.getElementById("InfoDialog").style.transform = "scale(1,1)";
+		document.body.classList.add('blur');
+	}
+	
+	function closeCredits() {
+		document.querySelectorAll('.CreditLink').forEach(e => e.remove());
+	
+		document.getElementById("InfoDialog").style = "opacity:0;"
+		document.getElementById("InfoDialog").style.transform = "scale(0.1,0.1)";
+		document.body.classList.remove('blur');
+		document.getElementById("InfoDialog").close();
+	}
+	
+	function createLinks(songs, credits) {
+		console.log(songs);
+		console.log(credits);
+		
+		songs.forEach(song => {
+			console.log(song);
+
+			const list = document.createElement('li')
+			
+			list.className = "CreditLink";
+			list.style = "color: var(--text-color); font-size: 18px";
+			list.textContent = song;
+		
+			document.getElementById("SongsContainer").appendChild(list);
+		});
+		
+		credits.forEach(credit => {
+			console.log(credit);
+			const [name, url] = credit;
+
+			const list = document.createElement('li')
+			const link = document.createElement('a');
+			
+			list.className = "CreditLink";
+			list.style = "color: var(--text-color)";
+		
+			link.textContent = name;
+			link.href = url;
+			link.target = "_blank";
+			link.style = "font-size: 18px";
+
+			list.appendChild(link);
+			document.getElementById("CreditsContainer").appendChild(list);
+		});
+	}
+   </script>
+</html>

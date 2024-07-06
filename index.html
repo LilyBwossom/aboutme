@@ -9,7 +9,7 @@
    <body>
       <div class="main">
          <div>
-			<nav class="nav"><a href="index.html">home</a><a href="inscryption.html">inscryption</a><a href="extensions.html">chrome extensions</a></nav>
+			<nav class="nav"><a href="index.html">home</a><a href="inscryption.html">inscryption</a><a href="blossom-engine.html">blossom engine</a><a href="extensions.html">chrome extensions</a></nav>
             <dialog id="SettingsDialog" style="width: 10%; 10%; opacity:0">
                <button style="position: absolute; top: 10px; left: 5px;" onclick="toggleSettings()">
                   <svg viewBox="0 0 24 24" width="2.4em" height="2.4em">
@@ -17,21 +17,21 @@
                   </svg>
                </button>
                <br></br>
-			   <b style="font-size: 22px">Themes:</b>
+			   <b style="font-size: 24px">Themes:</b>
 			   <br></br>
-               <button type="button" style="width: 100px" class="settingsbutton" onclick="setTheme('Midnight')">Midnight</button><br></br>
-               <button type="button" style="width: 100px" class="settingsbutton" onclick="setTheme('Blossom')">Blossom</button><br></br>
+               <button type="button" style="width: 100px" class="button" onclick="setTheme('Midnight')">Midnight</button><br></br>
+               <button type="button" style="width: 100px" class="button" onclick="setTheme('Blossom')">Blossom</button><br></br>
             </dialog>
             <div>
                <h1>hiii, my name is Lily</h1>
-               <img class="profile" src="images/pfp.png">
+               <img class="pfp circle" style="width: 100px; height: 100px; background-color: var(--bg-color);" src="images/transparent-1x1.png">
                <b style="color:var(--text-highlight); font-size: 22px;">she/her</b>
                <p style="white-space:pre">I like to develop games, mods, web applications and various other programs.
 On this website you can find some of the projects that I've worked on
 and learn more about me.
                </p>
-               <p style="white-space:pre">You can find the largest projects that I've contributed to in the navigation bar at the top of this page.
-And you can find the source code for these projects on my <a href="https://github.com/LilyBwossom" target=”_blank”>github</a>,
+               <p style="white-space:pre">You can find the largest projects that I've made or contributed to in the navigation bar at 
+the top of this page. And you can find the source code for these projects on my <a href="https://github.com/LilyBwossom" target=”_blank”>github</a>,
 along with the source code for some smaller projects.
                </p>
                <div></div>
@@ -51,5 +51,37 @@ along with the source code for some smaller projects.
       </div>
    </body>
    <script>
+	if (localStorage.getItem('pfp') != null) {
+		document.getElementsByClassName("pfp")[0].src = localStorage.getItem('pfp');
+	}
+   
+	async function get(path) {
+		const url = `https://lilyblossom.pythonanywhere.com/${path}`;
+
+		try {
+			const response = await fetch(url);
+			if (!response.ok) {
+				throw new Error(`Failed. Status code: ${response.status}`);
+			}
+
+			const data = await response.text();
+
+			console.log(String(data));
+			return String(data);
+		} catch (error) {
+			console.error(`Error: ${error.message}`);
+			return null;
+		}
+	}
+	
+	async function getPfp() {
+		var pfp = await get("discordpfp");
+		if (pfp != localStorage.getItem('pfp')) {
+			document.getElementsByClassName("pfp")[0].src = pfp ?? "images/pfp.png";
+		}
+		localStorage.setItem('pfp', pfp);
+	}
+	
+	getPfp();
    </script>
 </html>
