@@ -41,6 +41,11 @@
 						<ul id="CreditsContainer">
 						</ul>
 					</div>
+					<div style="float: left; width: auto; margin-left: 40px;">
+						</ul>
+						<b style="font-size: 24px">Difficulty Rating:</b>
+						<p style="color: var(--text-color); font-size: 18px; margin-top: 2;" id="RatingText"></p>
+					</div>
 				</div>
             </dialog>
             <div style="max-width: 100%;">
@@ -68,7 +73,7 @@ the engine, restart the game, and easily play with your favorite mods!</p>
 						<img class="squircle" src="fnf/card_images/fnaf.png" width="150" height="150">
 						<br></br>
 						<span style="font-size:1.2em;">
-							<a onClick="showCredits(['lore expanded', 'fnaf rap battle', 'lurking', 'followed', 'go fish', 'restless', 'guy', 'miller', 'midnight', 'performance', 'trapped', 'man', 'criminal', 'bite', 'showtime', 'terminated', 'watchful', 'beatbox', 'golden', 'lore', 'blubber', 'guy (vloo)', 'midnight (vloo)', 'bite (vloo)', 'lore (vloo)', 'unlikely rivals', 'beastbox', 'bite (vreen)', 'fever'], [['ourple guy', 'https://gamebanana.com/mods/357511'], ['vloo', 'https://gamebanana.com/mods/427724'], ['vreen', 'https://gamebanana.com/wips/71181']]); return false;" href="#" target=”_blank”>show mod info</a>
+							<a onClick="showCredits(['lore expanded', 'fnaf rap battle', 'lurking', 'followed', 'go fish', 'restless', 'guy', 'miller', 'midnight', 'performance', 'trapped', 'man', 'criminal', 'bite', 'showtime', 'terminated', 'watchful', 'beatbox', 'golden', 'lore', 'blubber', 'guy (vloo)', 'midnight (vloo)', 'bite (vloo)', 'lore (vloo)', 'unlikely rivals', 'beastbox', 'bite (vreen)', 'fever'], [['ourple guy', 'https://gamebanana.com/mods/357511'], ['vloo', 'https://gamebanana.com/mods/427724'], ['vreen', 'https://gamebanana.com/wips/71181']], '2-4'); return false;" href="#" target=”_blank”>show mod info</a>
 						</span>
 						<br></br>
 						<a href="fnf/card_images/fnaf.png" download>
@@ -97,11 +102,11 @@ the engine, restart the game, and easily play with your favorite mods!</p>
 		});
 	});
   
-	function showCredits(songs, credits) {
+	function showCredits(songs, credits, ratings) {
 		console.log("pressed!");
 
 		if (songs != null && credits != null) {
-			createLinks(songs, credits);
+			createLinks(songs, credits, ratings);
 		}
 		
 		document.getElementById("InfoDialog").showModal();
@@ -119,12 +124,8 @@ the engine, restart the game, and easily play with your favorite mods!</p>
 		document.getElementById("InfoDialog").close();
 	}
 	
-	function createLinks(songs, credits) {
-		console.log(songs);
-		console.log(credits);
-		
+	function createLinks(songs, credits, rating) {	
 		songs.forEach(song => {
-			console.log(song);
 
 			const list = document.createElement('li')
 			
@@ -136,7 +137,6 @@ the engine, restart the game, and easily play with your favorite mods!</p>
 		});
 		
 		credits.forEach(credit => {
-			console.log(credit);
 			const [name, url] = credit;
 
 			const list = document.createElement('li')
@@ -153,6 +153,8 @@ the engine, restart the game, and easily play with your favorite mods!</p>
 			list.appendChild(link);
 			document.getElementById("CreditsContainer").appendChild(list);
 		});
+		
+		document.getElementById("RatingText").innerText = (rating ?? "?") + "⭐";
 	}
    </script>
 </html>
