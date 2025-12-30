@@ -1,0 +1,44 @@
+/* normal */
+@font-face {
+    font-family: 'Selawik';
+    src: url('/fonts/selawk.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap
+}
+
+/* bold */
+@font-face {
+    font-family: 'Selawik';
+    src: url('/fonts/selawkb.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap
+}
+
+/* light */
+@font-face {
+    font-family: 'Selawik';
+    src: url('/fonts/selawkl.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap
+}
+
+/* semi-bold */
+@font-face {
+    font-family: 'Selawik';
+    src: url('/fonts/selawksb.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap
+}
+
+/* semi-light */
+@font-face {
+    font-family: 'Selawik';
+    src: url('/fonts/selawksl.woff2') format('woff2');
+    font-weight: 350;
+    font-style: normal;
+    font-display: swap
+}

@@ -1,0 +1,12 @@
+// this is the build ignore list, you can ignore files here
+// from being copied in the build process by using a simple system
+// -------------------------------------------------------------------------
+// static\robots.txt (checks if the file path matches "static\robots.txt")
+// *.ext (checks if the file path ends with ".ext")
+// source\assets\* (checks if the file path starts with "source\assets\")
+// source\assets\*.ext (checks if the file path starts with "source\assets\" and ends with ".ext")
+// -------------------------------------------------------------------------
+
+// this system also supports empty lines and comments as you can see
+
+*.pdn

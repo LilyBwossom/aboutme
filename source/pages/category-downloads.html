@@ -1,0 +1,352 @@
+<html>
+
+<head>
+	<title>Lily</title>
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<script type="text/javascript" src="scripts/settings.js"></script>
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="/css/base.css">
+
+	<!-- Lit Elements -->
+	<script type="module" src="/components/nav-bar.js"></script>
+	<script type="module" src="/components/settings.js"></script>
+	<script type="module" src="/components/kofi.js"></script>
+</head>
+
+<body>
+	<div class="middle">
+		<settings-button></settings-button>
+		<donate-button></donate-button>
+		<nav-bar></nav-bar>
+		<dialog id="InfoDialog" style="width: 10%; opacity:0">
+			<button style="position: fixed; top: 10px; left: 5px;" onclick="closeCredits()">
+				<svg viewBox="0 0 24 24" width="2.4em" height="2.4em">
+					<path style="color:var(--text-color)" fill="none" stroke="currentColor" stroke-linecap="round"
+						stroke-linejoin="round" stroke-width="3" d="M18 6L6 18M6 6l12 12"></path>
+				</svg>
+			</button>
+			<br></br>
+			<div>
+				<div style="float: left; width: auto; margin-right: 40px;">
+					<b style="font-size: 24px">Songs:</b>
+					<ul id="SongsContainer">
+				</div>
+
+				<div style="float: left; width: auto;">
+					</ul>
+					<b style="font-size: 24px">Credits:</b>
+					<ul id="CreditsContainer">
+					</ul>
+				</div>
+				<div style="float: left; width: auto; margin-left: 40px;">
+					</ul>
+					<b style="font-size: 24px">Difficulty Rating:</b>
+					<p style="color: var(--text-color); font-size: 18px; margin-top: 2;" id="RatingText"></p>
+				</div>
+			</div>
+		</dialog>
+		<div style="max-width: 100%;">
+			<h1>Category Downloads</h1>
+			<p>Download the modpacks that you like, put the contents<br>
+				of the downloaded zip files inside of the modpacks folder of <br>
+				the engine, restart the game, and easily play with your favorite mods!</p>
+			<div class="container" style="max-width: 100%;">
+
+				<div class="squircle" style="text-align: center;">
+					<h2 style="white-space:pre">hotline 024</h2>
+					<img class="squircle" src="/assets/blossom-engine/card_images/hotline024.png" width="150"
+						height="150">
+					<br></br>
+					<span style="font-size:1.2em;">
+						<a onClick="showCredits(['broadcasting', 'mirror magic', 'fandomania', 'killer queen', 'hyperfunk', 'sugarcrush', 'smokebomb', 'overdrive', 'expurgated', 'soda disco funk', 'armageddon', 'thunderstorm', 'cg megamix', 'promenade', 'deathmatch', 'nightland', 'uncanny valley', 'extraterrestrial', 'satellite picnic', 'sussy pussy', 'close chuckle', 'deep poems', 'majin', 'astral projection'], [['hotline 024', 'https://gamebanana.com/mods/373298']]); return false;"
+							href="#" target=”_blank”>show mod info</a>
+					</span>
+					<br></br>
+					<a href="https://drive.google.com/file/d/1LW8wj7-NYaYxJcTZMARM0sjuQRf1hjjx/view?usp=sharing"
+						target=”_blank”>
+						<button type="button" style="width: 175px; height:50px; font-size:1.4em" class="button">Download
+							Mod</button>
+					</a>
+				</div>
+
+				<div class="squircle" style="text-align: center;">
+					<h2 style="white-space:pre">FNAF</h2>
+					<img class="squircle" src="/assets/blossom-engine/card_images/fnaf.png" width="150" height="150">
+					<br></br>
+					<span style="font-size:1.2em;">
+						<a onClick="showCredits(['lore expanded', 'fnaf rap battle', 'lurking', 'followed', 'go fish', 'restless', 'guy', 'miller', 'midnight', 'performance', 'trapped', 'man', 'criminal', 'bite', 'showtime', 'terminated', 'watchful', 'beatbox', 'golden', 'lore', 'blubber', 'guy (vloo)', 'midnight (vloo)', 'bite (vloo)', 'lore (vloo)', 'unlikely rivals', 'beastbox', 'bite (vreen)', 'fever'], [['ourple guy', 'https://gamebanana.com/mods/357511'], ['vloo', 'https://gamebanana.com/mods/427724'], ['vreen', 'https://gamebanana.com/wips/71181']]); return false;"
+							href="#" target=”_blank”>show mod info</a>
+					</span>
+					<br></br>
+					<a href="https://drive.google.com/file/d/18-b4JHW9ERF5r4U2bYKQxDVF0_3gA0e4/view?usp=sharing"
+						target=”_blank”>
+						<button type="button" style="width: 175px; height:50px; font-size:1.4em" class="button">Download
+							Mod</button>
+					</a>
+				</div>
+
+				<div class="squircle" style="text-align: center;">
+					<h2 style="white-space:pre">vs whitty</h2>
+					<img class="squircle" src="/assets/blossom-engine/card_images/whitty.png" width="150" height="150">
+					<br></br>
+					<span style="font-size:1.2em;">
+						<a onClick="showCredits(['lo-fight', 'overhead', 'ballistic', 'ballistic remix', 'lo-fight (HQ)', 'overhead (HQ)', 'ballistic (HQ)', 'ballistic (beta mix)', 'underground', 'low-rise', 'hungry', 'underground (HQ)', 'underground (in-game mix)', 'low-rise (HQ)', 'hungry (HQ)', 'low revs', 'detonator', 'bomblitz'], [['whitty', 'https://gamebanana.com/mods/354884'], ['whitty aside', 'https://gamebanana.com/mods/422319']]); return false;"
+							href="#" target=”_blank”>show mod info</a>
+					</span>
+					<br></br>
+					<a href="https://drive.google.com/file/d/19bWFtIK4YV-TA1hmGCzpVcKeaQMxbtlQ/view?usp=sharing"
+						target=”_blank”>
+						<button type="button" style="width: 175px; height:50px; font-size:1.4em" class="button">Download
+							Mod</button>
+					</a>
+				</div>
+
+				<div class="squircle" style="text-align: center;">
+					<h2 style="white-space:pre">vs sonic</h2>
+					<img class="squircle" src="/assets/blossom-engine/card_images/sonic.png" width="150" height="150">
+					<br></br>
+					<span style="font-size:1.2em;">
+						<a onClick="showCredits(['pasta night', 'prey', 'phantasm', 'trinity', 'thriller gen'], [['hypno\'s lullaby', 'https://gamebanana.com/mods/332345'], ['sonic.exe', 'https://gamebanana.com/mods/316022'], ['sonic vs fleetway', 'https://gamebanana.com/mods/359046'], ['vs rewrite', 'https://gamebanana.com/mods/417560']]); return false;"
+							href="#" target=”_blank”>show mod info</a>
+					</span>
+					<br></br>
+					<a href="https://drive.google.com/file/d/149UUg3PZl2R7B_t6EAlZyifLrAtxAlps/view?usp=sharing"
+						target=”_blank”>
+						<button type="button" style="width: 175px; height:50px; font-size:1.4em" class="button">Download
+							Mod</button>
+					</a>
+				</div>
+
+				<div class="squircle" style="text-align: center;">
+					<h2 style="white-space:pre">hazy river</h2>
+					<img class="squircle" src="/assets/blossom-engine/card_images/hazy_river.png" width="150"
+						height="150">
+					<br></br>
+					<span style="font-size:1.2em;">
+						<a onClick="showCredits(['headache', 'nerves', 'release', 'fading', 'good enough', 'lover', 'tug of war', 'take a swig of this', 'animal', 'dilemma', 'drowning', 'headache-', 'nerves-', 'release-', 'fading-'], [['hazy river', 'https://gamebanana.com/mods/374660']]); return false;"
+							href="#" target=”_blank”>show mod info</a>
+					</span>
+					<br></br>
+					<a href="https://drive.google.com/file/d/1XrCIM1TuBOWF_iLeGQy0wDOkviBfDVg5/view?usp=sharing"
+						target=”_blank”>
+						<button type="button" style="width: 175px; height:50px; font-size:1.4em" class="button">Download
+							Mod</button>
+					</a>
+				</div>
+
+				<div class="squircle" style="text-align: center;">
+					<h2 style="white-space:pre">vs matt</h2>
+					<img class="squircle" src="/assets/blossom-engine/card_images/matt.png" width="150" height="150">
+					<br></br>
+					<span style="font-size:1.2em;">
+						<a onClick="showCredits(['light it up', 'ruckus', 'target practice', 'burnout', 'sporting', 'boxing match', 'flaming glove'], [['matt voiid sides', 'https://gamebanana.com/mods/372018']]); return false;"
+							href="#" target=”_blank”>show mod info</a>
+					</span>
+					<br></br>
+					<a href="https://drive.google.com/file/d/1KwswlIh6iaa2y9Jm4B0dBPqrsdEamOYl/view?usp=sharing"
+						target=”_blank”>
+						<button type="button" style="width: 175px; height:50px; font-size:1.4em" class="button">Download
+							Mod</button>
+					</a>
+				</div>
+
+				<div class="squircle" style="text-align: center;">
+					<h2 style="white-space:pre">vs tricky</h2>
+					<img class="squircle" src="/assets/blossom-engine/card_images/tricky.png" width="150" height="150">
+					<br></br>
+					<span style="font-size:1.2em;">
+						<a onClick="showCredits(['improbable outset', 'madness', 'hellclown', 'expurgation'], [['tricky', 'https://gamebanana.com/mods/44334']]); return false;"
+							href="#" target=”_blank”>show mod info</a>
+					</span>
+					<br></br>
+					<a href="https://drive.google.com/file/d/1Y6dUhJquyHXunWYxrhX-rnEUB8fQH_d6/view?usp=sharing"
+						target=”_blank”>
+						<button type="button" style="width: 175px; height:50px; font-size:1.4em" class="button">Download
+							Mod</button>
+					</a>
+				</div>
+
+				<div class="squircle" style="text-align: center;">
+					<h2 style="white-space:pre">mid-fight masses</h2>
+					<img class="squircle" src="/assets/blossom-engine/card_images/sarvente.png" width="150"
+						height="150">
+					<br></br>
+					<span style="font-size:1.2em;">
+						<a onClick="showCredits(['tutorial remix', 'parish', 'worship', 'zavodilla', 'gospel', 'casanova', 'demonila', 'casanova (vs selever)', 'attack', 'attacklovania', 'crimsong', 'agitated remix'], [['selever', 'https://gamejolt.com/games/fnf-vs-selever/650777']]); return false;"
+							href="#" target=”_blank”>show mod info</a>
+					</span>
+					<br></br>
+					<a href="https://drive.google.com/file/d/1Gw1otEPoVmEgrlFOAYmyE0HI44c5od33/view?usp=sharing"
+						target=”_blank”>
+						<button type="button" style="width: 175px; height:50px; font-size:1.4em" class="button">Download
+							Mod</button>
+					</a>
+				</div>
+
+				<div class="squircle" style="text-align: center;">
+					<h2 style="white-space:pre">herobrine</h2>
+					<img class="squircle" src="/assets/blossom-engine/card_images/herobrine.png" width="150"
+						height="150">
+					<br></br>
+					<span style="font-size:1.2em;">
+						<a onClick="showCredits(['recreated', 'danger (old)', 'new world', 'empty eyes', 'danger', 'removed', 'alert', 'apparition', 'a familiar face', 'exitium', 'shadows', 'unknown being'], [['blocky myths', 'https://gamebanana.com/mods/329840']]); return false;"
+							href="#" target=”_blank”>show mod info</a>
+					</span>
+					<br></br>
+					<a href="https://drive.google.com/file/d/156iKEBkC1Fgdtf9NQinPF_8_5K-AO4PR/view?usp=sharing"
+						target=”_blank”>
+						<button type="button" style="width: 175px; height:50px; font-size:1.4em" class="button">Download
+							Mod</button>
+					</a>
+				</div>
+
+				<div class="squircle" style="text-align: center;">
+					<h2 style="white-space:pre">hex</h2>
+					<img class="squircle" src="/assets/blossom-engine/card_images/hex.png" width="150" height="150">
+					<br></br>
+					<span style="font-size:1.2em;">
+						<a onClick="showCredits(['dunk', 'ram', 'hello world', 'glitcher', 'encore'], [['hex', 'https://gamebanana.com/mods/44225']]); return false;"
+							href="#" target=”_blank”>show mod info</a>
+					</span>
+					<br></br>
+					<a href="https://drive.google.com/file/d/1T99k5Q7BTgXifkBab_kgF-fd9bQO-6Hz/view?usp=sharing"
+						target=”_blank”>
+						<button type="button" style="width: 175px; height:50px; font-size:1.4em" class="button">Download
+							Mod</button>
+					</a>
+				</div>
+
+				<div class="squircle" style="text-align: center;">
+					<h2 style="white-space:pre">indie cross</h2>
+					<img class="squircle" src="/assets/blossom-engine/card_images/indie.png" width="150" height="150">
+					<br></br>
+					<span style="font-size:1.2em;">
+						<a onClick="showCredits(['snake eyes', 'technicolor tussle', 'knockout', 'whoopee', 'sansational', 'final stretch', 'burning in hell', 'imminent demise', 'terrible sin', 'last reel', 'nightmare run', 'bonedoggle', 'freaky machine', 'build our freaky machine', 'satanic funkin', 'ritual', 'bad to the bone', 'devils gambit', 'bad time', 'despair', 'saness', 'gose', 'gose classic'], [['indie cross', 'https://gamejolt.com/games/indiecross/643540']]); return false;"
+							href="#" target=”_blank”>show mod info</a>
+					</span>
+					<br></br>
+					<a href="https://drive.google.com/file/d/17B9GEzHKUlCvIN24j0oLT79wOBUFmxv3/view?usp=sharing"
+						target=”_blank”>
+						<button type="button" style="width: 175px; height:50px; font-size:1.4em" class="button">Download
+							Mod</button>
+					</a>
+				</div>
+
+				<div class="squircle" style="text-align: center;">
+					<h2 style="white-space:pre">ski</h2>
+					<img class="squircle" src="/assets/blossom-engine/card_images/ski.png" width="150" height="150">
+					<br></br>
+					<span style="font-size:1.2em;">
+						<a onClick="showCredits(['meow', 'bopeepow', 'talentless ski', 'no memes', 'manifest', 'foolhardy', 'sporty ski', 'dandelion'], [['ski', 'https://gamebanana.com/mods/370033'], ['dandelion', 'https://gamebanana.com/mods/401873']]); return false;"
+							href="#" target=”_blank”>show mod info</a>
+					</span>
+					<br></br>
+					<a href="https://drive.google.com/file/d/1fQNrH8ivH9SZTTEzDtXsVZIrBJuU7IAd/view?usp=sharing"
+						target=”_blank”>
+						<button type="button" style="width: 175px; height:50px; font-size:1.4em" class="button">Download
+							Mod</button>
+					</a>
+				</div>
+
+				<div class="squircle" style="text-align: center;">
+					<h2 style="white-space:pre">tabi</h2>
+					<img class="squircle" src="/assets/blossom-engine/card_images/tabi.png" width="150" height="150">
+					<br></br>
+					<span style="font-size:1.2em;">
+						<a onClick="showCredits(['my battle', 'last chance', 'genocide', 'king'], [['tabi', 'https://gamebanana.com/mods/286388'], ['king', 'https://gamebanana.com/mods/375062']]); return false;"
+							href="#" target=”_blank”>show mod info</a>
+					</span>
+					<br></br>
+					<a href="https://drive.google.com/file/d/1dwQAWmxp9AaeM9CSEU5PSgNwXo_xq28K/view?usp=sharing"
+						target=”_blank”>
+						<button type="button" style="width: 175px; height:50px; font-size:1.4em" class="button">Download
+							Mod</button>
+					</a>
+				</div>
+
+				<div class="squircle" style="text-align: center;">
+					<h2 style="white-space:pre">misc</h2>
+					<img class="squircle" src="/assets/blossom-engine/card_images/misc.png" width="150" height="150">
+					<br></br>
+					<span style="font-size:1.2em;">
+						<a onClick="showCredits(['atrocity', 'fish fillet', 'playtime'], [['atrocity', 'https://gamebanana.com/mods/365489'], ['darwin', 'https://gamebanana.com/mods/442451']]); return false;"
+							href="#" target=”_blank”>show mod info</a>
+					</span>
+					<br></br>
+					<a href="https://drive.google.com/file/d/13xFv-kR-A5pgW2lE31PcOk-8O8Sy-Cvi/view?usp=sharing"
+						target=”_blank”>
+						<button type="button" style="width: 175px; height:50px; font-size:1.4em" class="button">Download
+							Mod</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	document.addEventListener("DOMContentLoaded", function (arg) {
+		document.getElementById("InfoDialog").addEventListener('click', function (event) {
+			dialogClickHandler(event, closeCredits);
+		});
+	});
+
+	function showCredits(songs, credits, ratings) {
+		console.log("pressed!");
+
+		if (songs != null && credits != null) {
+			createLinks(songs, credits, ratings);
+		}
+
+		document.getElementById("InfoDialog").showModal();
+		document.getElementById("InfoDialog").style = "opacity: 1;";
+		document.getElementById("InfoDialog").style.transform = "scale(1,1)";
+		document.body.classList.add('blur');
+	}
+
+	function closeCredits() {
+		document.querySelectorAll('.CreditLink').forEach(e => e.remove());
+
+		document.getElementById("InfoDialog").style = "opacity:0;"
+		document.getElementById("InfoDialog").style.transform = "scale(0.1,0.1)";
+		document.body.classList.remove('blur');
+		document.getElementById("InfoDialog").close();
+	}
+
+	function createLinks(songs, credits, rating) {
+		songs.forEach(song => {
+
+			const list = document.createElement('li')
+
+			list.className = "CreditLink";
+			list.style = "color: var(--text-color); font-size: 18px";
+			list.textContent = song;
+
+			document.getElementById("SongsContainer").appendChild(list);
+		});
+
+		credits.forEach(credit => {
+			const [name, url] = credit;
+
+			const list = document.createElement('li')
+			const link = document.createElement('a');
+
+			list.className = "CreditLink";
+			list.style = "color: var(--text-color)";
+
+			link.textContent = name;
+			link.href = url;
+			link.target = "_blank";
+			link.style = "font-size: 18px";
+
+			list.appendChild(link);
+			document.getElementById("CreditsContainer").appendChild(list);
+		});
+
+		document.getElementById("RatingText").innerText = (rating ?? "?") + "⭐";
+	}
+</script>
+
+</html>

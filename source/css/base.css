@@ -1,0 +1,110 @@
+@import url('/css/selawik.css');
+@import url('/css/theme.css');
+
+/* anti apple code (just in case)
+@supports (-webkit-touch-callout: none) {
+    * {
+        visibility: hidden !important;
+    }
+}
+*/
+
+* {
+    /* open source alternative to Segoe UI (windows font) */
+    font-family: "Selawik";
+}
+
+body {
+    margin: 0;
+    padding: 0 1rem 6.5rem 1rem; /* the bottom padding could cause problems with pages exactly the size of the screen */
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: filter 0.5s ease;
+}
+
+/* ------- classes/ids ------- */
+
+.middle {
+    margin: 0 auto;
+    max-width: 75ch;
+}
+
+a,
+a.text-highlight {
+  color: var(--text-highlight);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* means as an option to override link highlights */
+.text-normal {
+    color: var(--text-color);
+}
+
+.standard-button {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border-radius: 6px 6px 6px 6px;
+    font-size: 20px;
+}
+
+.circle {
+    background: var(--bg-color);
+    border-radius: 50%;
+}
+
+.squircle {
+    background-color: var(--menu-bg-color);
+    border-radius: 6px 6px 6px 6px;
+    border: 0px;
+}
+
+.blur {
+    filter: blur(2px);
+}
+
+#cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* -------------------------- */
+
+b {
+    color: var(--text-color);
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}
+
+dialog {
+    min-width: fit-content;
+    max-width: fit-content;
+    transition: transform 0.5s, opacity 0.5s;
+    transform: scale(0.1, 0.1);
+    background-color: var(--menu-bg-color);
+    border-radius: 6px 6px 6px 6px;
+    border: 0px;
+}
+
+.testdiv {
+    display: inline-block;
+    margin: 50px 0 0 50px;
+    width: 500px;
+    height: 500px;
+
+    /*
+    border-image-source: url('/assets/themes/cute/ribbon_border.webp');
+    border-image-slice: 23 13 18 13;
+    border-image-width: 5%;
+    border-image-repeat: round;
+    */
+}

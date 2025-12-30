@@ -1,0 +1,78 @@
+<html>
+
+<head>
+   <title>Lily</title>
+   <link rel="stylesheet" href="css/base.css">
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width">
+
+   <script type="text/javascript" src="scripts/settings.js"></script>
+
+   <!-- Styles -->
+   <link rel="stylesheet" href="css/base.css">
+</head>
+
+<body>
+   <div class="main">
+      <div>
+         <nav class="nav"><a href="index.html">home</a><a href="inscryption.html">inscryption</a><a
+               href="blossom-engine.html">blossom engine</a><a href="extensions.html">chrome extensions</a></nav>
+         <dialog id="SettingsDialog" style="width: 10%; opacity:0">
+            <button style="position: absolute; top: 10px; left: 5px;" onclick="toggleSettings()">
+               <svg viewBox="0 0 24 24" width="2.4em" height="2.4em">
+                  <path style="color:var(--text-color)" fill="none" stroke="currentColor" stroke-linecap="round"
+                     stroke-linejoin="round" stroke-width="3" d="M18 6L6 18M6 6l12 12"></path>
+               </svg>
+            </button>
+            <br></br>
+            <b style="font-size: 24px">Themes:</b>
+            <br></br>
+            <button type="button" style="width: 100px" class="button"
+               onclick="setTheme('Midnight')">Midnight</button><br></br>
+            <button type="button" style="width: 100px" class="button"
+               onclick="setTheme('Blossom')">Blossom</button><br></br>
+         </dialog>
+         <div>
+            <h1>Blossom Engine</h1>
+            <p>Blossom Engine is a friday night funkin engine build on top of version 0.7.3 of psych engine.<br>
+               The goal of Blossom Engine is to make your favorite mods more accessible, significantly<br>
+               reduce file sizes, and maximize fun.</p>
+            <b>Blossom engine includes the following features:</b>
+            <ul>
+               <li>a large amount of downloadable mods/modpacks that have been tweaked to work flawless with the engine
+               </li>
+               <li>categories for each mod in the freeplay menu</li>
+               <li>difficulty ratings for each song and mod category (work in progress)</li>
+               <li>an option to favorite songs so they appear in the "favorites" category</li>
+               <li>an option to select what mechanics to use in a song</li>
+               <li>a gameplay modifier to play as the opponent and to play both sides at once</li>
+               <li>a gameplay modifier to randomize note positions</li>
+               <li>a gameplay modifier to make opponent notes deal damage</li>
+               <li>a gameplay modifier to make the camera move when you hit a note</li>
+               <li>faster menu animations</li>
+               <li>higher limit for the framerate setting</li>
+               <li>a setting to add an underlay beneath the notes for better visibility</li>
+               <li>a setting to start a countdown whenever you resume after pausing a song</li>
+               <li>some small quality of life sprite improvements</li>
+               <li>lua support for all features</li>
+            </ul>
+            <p>You can find a download for blossom engine on gamebanana or gamejolt,<br>
+               and the download page for mods/modpacks created for this engine on <a
+                  href="category-downloads.html">this<br>
+                  page</a>.</p>
+         </div>
+         <button class="donatebutton" onclick="window.open('https://ko-fi.com/lilysylvie','_blank')"
+            style="background-color:var(--text-highlight);">
+            <img class="kofiimage" src="https://storage.ko-fi.com/cdn/cup-border.png" data-rotation="0">
+            <b style="font-size: 16px; position:relative; margin-left: 7.5px; bottom: 5px; color:#fff">Support me</b>
+         </button>
+         <button type="submit" class="settings" onclick="toggleSettings()">
+            <img src="images/settings_button.png" style="width: 80px; height: 80px;" />
+         </button>
+      </div>
+   </div>
+</body>
+<script>
+</script>
+
+</html>

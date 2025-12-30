@@ -1,0 +1,27 @@
+<html>
+
+<head>
+   <title>Lily</title>
+   <link rel="stylesheet" href="stylesheets/base.css">
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width">
+   <script type="text/javascript" src="scripts/settings.js"></script>
+</head>
+
+<body>
+   <div class="main">
+      <div>
+         <nav class="nav"><a href="index.html">home</a><a href="inscryption.html">inscryption</a><a
+               href="blossom-engine.html">blossom engine</a><a href="extensions.html">chrome extensions</a></nav>
+         <img id="constructionimage" style="position: absolute; left: 50%; transform: translateX(-50%); bottom: 60px"
+            src="images/under-construction.png" width="900" height="600" />
+      </div>
+   </div>
+</body>
+<script>
+   if (localStorage.getItem('theme') == "Midnight") {
+      document.getElementById("constructionimage").style.filter = "invert(100%)";
+   }
+</script>
+
+</html>

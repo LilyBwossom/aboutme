@@ -1,0 +1,25 @@
+{
+    "name": "website-build-process",
+    "version": "1.0.0",
+    "scripts": {
+        "serve": "npx live-server --port=3000 --wait=800 ./build",
+        "build": "node lilbuild.js",
+        "dev": "node lilbuild.js -nw"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.21",
+        "baseline-browser-mapping": "^2.9.11",
+        "chalk": "^5.6.2",
+        "fs-extra": "^11.3.2",
+        "live-server": "^1.2.2",
+        "path": "^0.12.7",
+        "postcss": "^8.5.6",
+        "postcss-cli": "^11.0.1",
+        "postcss-mixins": "^12.1.2",
+        "postcss-nested": "^7.0.2",
+        "postcss-nesting": "^13.0.2",
+        "postcss-pxtorem": "^6.1.0",
+        "postcss-short": "^5.0.0",
+        "sharp": "^0.34.4"
+    }
+}
